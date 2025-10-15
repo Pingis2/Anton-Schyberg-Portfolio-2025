@@ -11,9 +11,6 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,7 +28,8 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  grid-row-start: 2;
+  align-items: center;
+  width: 100%;
 }
 
 .main ol {
@@ -130,6 +128,40 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: rgb(111, 111, 111) 1px solid;
+  border-top: rgb(111, 111, 111) 1px solid;
+  justify-content: space-between;
+
+  .introBox {
+    width: 550px;
+    font-size: 2rem;
+
+    p {
+      margin-right: 60px;
+    }
+
+    .imageWrapper {
+      position: relative;
+
+      &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgb(71, 2, 71);
+          opacity: 0.5;
+          pointer-events: none;
+      }
+    }
+  }
 }
 
 /* Enable hover only on non-touch devices */
